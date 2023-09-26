@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CarDex | Search</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <div class="header-wrapper">
+            <img class="header-logo" src="imgs/header_logo.png" alt="CarDex Logo">
+
+            <nav class="header-nav-wrapper">    
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="add.html">Manufacturers</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <p class="search-description-top">Search <span>over 1000</span> makes and models!</p>
+
+        <div class="search-results-wrapper">
+            <div class="search-results-description">
+                <img src="" alt="Back" class="search-results-back-button">
+                <p class="search-results-description-text">Showing <span>1-10</span> of <span>1000</span> results for <span>Porsche 911</span></p>
+            </div>
+
+            <div class="filters-wrapper">
+                <div class="filters-header-wrapper">
+                    <img src="" alt="Filter Icon" class="filters-header-icon">
+                    <p class="filters-header-text">Filters</p>
+                </div>
+
+                <ul class="filters-list">
+                    <li class="filter-item">
+                        <p class="filter-item-text">Make</p>
+                        <select class="filter-item-dropdown">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </li>
+
+                    <li class="filter-item">
+                        <p class="filter-item-text">Model</p>
+                        <!-- This will have to be populated dynamically to make sense -->
+                        <select class="filter-item-dropdown">
+                            <option value="volvo">...</option>
+                        </select>
+                    </li>
+
+                    <li class="filter-item">
+                        <p class="filter-item-text">Min Year</p>
+                        <!-- Slider to select year -->
+                        <input type="range" min="1900" max="2024" value="1993" class="filter-item-slider">
+                        
+                        <!-- This will have to be populated dynamically to make sense -->
+                        <p class="filter-item-value">1993</p>
+                    </li>
+                   
+                    <li class="filter-item">
+                        <p class="filter-item-text">Max Year</p>
+                        <!-- Slider to select year -->
+                        <input type="range" min="1900" max="2024" value="2023" class="filter-item-slider">
+                        
+                        <!-- This will have to be populated dynamically to make sense -->
+                        <p class="filter-item-value">2023</p>
+                    </li>
+
+                    <li class="filter-item">
+                        <p class="filter-item-text">Min Price</p>
+                        <!-- Slider to select price -->
+                        <input type="range" min="0" max="1000000" value="10000" class="filter-item-slider">
+                        
+                        <!-- This will have to be populated dynamically to make sense -->
+                        <p class="filter-item-value">$10,000</p>
+                    </li>
+
+                    <li class="filter-item">
+                        <p class="filter-item-text">Max Price</p>
+                        <!-- Slider to select price -->
+                        <input type="range" min="0" max="1000000" value="50000" class="filter-item-slider">
+                        
+                        <!-- This will have to be populated dynamically to make sense -->
+                        <p class="filter-item-value">$50,000</p>
+                    </li>
+
+                    <li class="filter-item">
+                        <p class="filter-item-text">Transmission</p>
+                        <p class="filter-item-value">Automatic</p>
+                        <input type="checkbox" class="filter-item-checkbox">
+                        
+                        <p class="filter-item-value">Manual</p>
+                        <input type="checkbox" class="filter-item-checkbox">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="results-wrapper">
+                <div class="model-display-quick">
+                    <h1 class="model-display-quick-name">Porsche 911 (992)</h1>
+                    <p class="model-display-quick-info"><span>(icon)</span> 3.0L twin turbo V6  | 379 hp @ 6500</p>
+                    <p class="model-display-quick-info"><span>(icon)</span> 0 - 60mph: 3.8s</p>
+                    <img src="imgs/porsche_911_992.png" alt="Porsche 911 (992)" class="model-display-quick-img">
+                    <a href="" class="model-display-quick-learn-more">Learn More ></a>
+                </div>
+
+                <div class="model-display-quick">
+                    <h1 class="model-display-quick-name">Porsche 911 (993)</h1>
+                    <p class="model-display-quick-info"><span>(icon)</span> 3.6L naturally aspirated V6  | 272 @ 6100 rpm</p>
+                    <p class="model-display-quick-info"><span>(icon)</span> 0 - 60mph: 5.4s</p>
+                    <img src="imgs/porsche_911_993.jpeg" alt="Porsche 911 (993)" class="model-display-quick-img">
+                    <a href="" class="model-display-quick-learn-more">Learn More ></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-wrapper">
+            <p class="footer-copyright"><span>&copy;</span> 2023 CarDex</p>
+
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms-conditions.html">Terms and Conditions</a>
+
+                <div class="footer-social">
+                    <!-- Let's imagine these are links to some official accounts -->
+                    <a href="https://www.instagram.com"><img id="footer-social-img" src="imgs/icons/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com"><img id="footer-social-img" src="imgs/icons/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.youtube.com"><img id="footer-social-img" src="imgs/icons/youtube.png" alt="Youtube"></a>
+
+                    <style>
+                        /* Sorry I had to break the no CSS rule the images were ridiculously large */
+                        #footer-social-img {
+                            width: 30px;
+                            height: 30px;
+                            margin: 0 10px;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
