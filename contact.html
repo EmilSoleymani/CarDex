@@ -2,12 +2,11 @@
 
 <html>
     <head>
-        <title>CarDex | Home</title>
+        <title>CarDex | Contact</title>
         <meta charset="utf-8">
     </head>
 
     <body>
-
         <div class="header-wrapper">
             <img class="header-logo" src="imgs/header_logo.png" alt="CarDex Logo">
 
@@ -22,41 +21,15 @@
             </nav>
         </div>
 
-        <div class="search-bar-wrapper">
-            <p class="search-bar-description">Search <span>over 1000</span> makes and models!</p>
+        <div class="contact-form-wrapper">
+            <h1 class="contact-form-title">Contact Us</h1>
 
-            <div class="search-bar">
-                <form action="search.html" method="get">
-                    <input type="text" name="search" placeholder="Search...">
-                    <input type="submit" value="Search">
-                </form>
-            </div>
-        </div>
-
-        <div class="trending-models-wrapper">
-            <h1 class="trending-models-header">Trending Models</h1>
-
-            <div class="trending-models-list">
-                <!-- These will later be dynamically loaded from API calls -->
-                
-                <div class="model-display-mini">
-                    <p class="model-display-mini-name">2004 Ford Taurus</p>
-                    <img class="model-display-mini-img" src="imgs/ford_taurus.png" alt="2004 Ford Taurus">
-                    <p class="model-display-mini-specs">3.0L V6 | 200 hp @ 5650 rpm</p>
-                </div>
-
-                <div class="model-display-mini">
-                    <p class="model-display-mini-name">2005 Hyundai Tucson</p>
-                    <img class="model-display-mini-img" src="imgs/hyundai_tucson.png" alt="2004 Ford Taurus">
-                    <p class="model-display-mini-specs">2.0L L4 | 140 hp @ 6000 rpm</p>
-                </div>
-
-                <div class="model-display-mini">
-                    <p class="model-display-mini-name">2007 Chrysler PT Cruiser</p>
-                    <img class="model-display-mini-img" src="imgs/pt_cruiser.png" alt="2004 Ford Taurus">
-                    <p class="model-display-mini-specs">2.4L L4 Turbo | 230 hp @ 5100 rpm</p>
-                </div>
-            </div>
+            <form action="mailto:cardex@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <input type="text" name="name" placeholder="Name" class="contact-form-input">
+                <input type="email" name="email" placeholder="Email" class="contact-form-input">
+                <textarea name="message" placeholder="Message" class="contact-form-input"></textarea>
+                <input type="submit" value="Send" class="contact-form-submit">
+            </form>
         </div>
 
         <div class="footer-wrapper">
