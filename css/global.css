@@ -70,6 +70,67 @@ body {
 .header-nav-wrapper ul li a:hover {
     color: var(--primary-color);
 }
+
+.header-logo {
+    cursor: pointer;
+    opacity: 90%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.header-logo:hover {
+    opacity: 100%;
+}
 /**** HEADER ****/
 
+/**** FOOTER ****/
+.footer-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-left: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color-light)
+}
+
+.footer-social-img {
+    height: 40px;
+    cursor: pointer;
+    padding: 3px;
+    opacity: 80%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-social-img:hover {
+    opacity: 100%;
+}
+
+.footer-social-img[src$="youtube.png"] {
+    /* Specifically adjusting youtube png image */
+    height: 32px;
+    padding-top: 1px;
+    padding-left: 2px;
+    margin-bottom: 4px;
+}
+
+.footer-links {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-left: 0;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: var(--primary-color-light);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+/**** FOOTER ****/
 
