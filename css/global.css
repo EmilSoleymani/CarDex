@@ -1,0 +1,75 @@
+/*
+This file is used to store global css styles like fonts, colors, etc.
+Headers and footers are also stored here.
+
+Author: Emil Soleymani
+Date: 2023-09-28
+*/
+
+:root {
+    --primary-color: #F48961;
+    --primary-color-light: #f7a283;
+    --secondary-color: #ffffff;
+    --text-color: #264F54;
+    --text-color-light: #3a7880;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior-y: none;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+/**** HEADER ****/
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-left: 0;
+    background-color: var(--secondary-color);
+}
+
+.header-nav-wrapper ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+}
+
+.header-nav-wrapper ul li {
+    margin-right: 1rem;
+    cursor: pointer;
+    padding: 0px 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-nav-wrapper ul li:hover{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+#selected {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header-nav-wrapper ul li a {
+    text-decoration: none;
+    color: var(--primary-color-light);
+    transition: all 0.3s ease-in-out;
+}
+
+.header-nav-wrapper ul li a:hover {
+    color: var(--primary-color);
+}
+/**** HEADER ****/
+
+
