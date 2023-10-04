@@ -5,3 +5,58 @@ Author: Emil Soleymani
 Date: 2023-09-28
 */
 
+/**** SEARCH BAR ****/
+.search-bar-wrapper {
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 4rem;
+    font-size: large;
+}
+
+.search-bar-description {
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+}
+
+.search-bar {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 50px;
+    padding: 5px 15px;
+    margin-top: 20px;
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar form input[type="text"] {
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    background-color: var(--secondary-color);
+    text-align: left;
+    font-size: large;
+    color: var(--primary-color);
+}
+
+.search-bar-btn {
+    margin-right: 0px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--primary-color-light);
+    color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.search-bar:hover .search-bar-btn{
+    background-color: var(--primary-color);
+}
+/**** SEARCH BAR ****/

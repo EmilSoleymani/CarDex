@@ -3,7 +3,7 @@ This file is used to store global css styles like fonts, colors, etc.
 Headers and footers are also stored here.
 
 Author: Emil Soleymani
-Date: 2023-09-28
+Date: 2023-10-03
 */
 
 :root {
@@ -13,6 +13,14 @@ Date: 2023-09-28
     --text-color: #264F54;
     --text-color-light: #3a7880;
     --font-family: 'Roboto', sans-serif;
+}
+
+::placeholder {
+    color: var(--primary-color-light);
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: var(--primary-color-light);
 }
 
 * {
