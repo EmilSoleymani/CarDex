@@ -60,3 +60,86 @@ Date: 2023-09-28
     background-color: var(--primary-color);
 }
 /**** SEARCH BAR ****/
+
+/**** TRENDING MODELS ****/
+.trending-models-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.trending-models-header {
+    margin-left: 4rem;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+}
+
+.trending-models-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0rem;
+}
+
+.model-display-mini {
+    margin: 3rem;
+    width: 20rem;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.model-display-mini:hover {
+    transform: scale(1.05);
+}
+
+.model-display-mini:hover .model-display-mini-name{
+    color: var(--text-color);
+}
+
+.model-display-mini-name {
+    color: var(--text-color-light);
+    font-family: var(--font-family);
+    transition: all 0.3s ease-in-out;
+    padding: 1px 4px;
+}
+
+.model-display-mini-name-wrapper {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: max-content;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.model-display-mini-underline {
+    width: 0%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.model-display-mini-name-wrapper:hover .model-display-mini-underline {
+    width: 100%;
+}
+
+.model-display-mini img {
+    height: 15rem;
+    border-radius: 1rem 1rem 0 0;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+}
+
+.model-display-mini img:hover {
+    opacity: 1;
+}
+
+.model-display-mini-specs {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-align: center;
+    color: var(--text-color-light);
+    font-family: var(--font-family);
+    transition: all 0.3s ease-in-out;
+}
+/**** TRENDING MODELS ****/

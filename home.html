@@ -33,7 +33,7 @@ Last Modification: 2023-10-03
             <p class="search-bar-description">Search <span>over 1000</span> makes and models!</p>
 
             <div class="search-bar">
-                <form action="search.html" method="get">
+                <form action="search.html" method="get" autocomplete="off">
                     <input type="text" name="search" placeholder="Search for a car model...">
                     <input class="search-bar-btn" type="submit" value="→">
                 </form>
@@ -47,19 +47,29 @@ Last Modification: 2023-10-03
                 <!-- These will later be dynamically loaded from API calls -->
                 
                 <div class="model-display-mini">
-                    <p class="model-display-mini-name">2004 Ford Taurus</p>
+                    <div class="model-display-mini-name-wrapper">
+                        <p class="model-display-mini-name">2004 Ford Taurus</p>
+                        <div class="model-display-mini-underline"></div>
+                    </div>
+                    
                     <img class="model-display-mini-img" src="imgs/ford_taurus.png" alt="2004 Ford Taurus">
                     <p class="model-display-mini-specs">3.0L V6 | 200 hp @ 5650 rpm</p>
                 </div>
 
                 <div class="model-display-mini">
-                    <p class="model-display-mini-name">2005 Hyundai Tucson</p>
+                    <div class="model-display-mini-name-wrapper">
+                        <p class="model-display-mini-name">2004 Ford Taurus</p>
+                        <div class="model-display-mini-underline"></div>
+                    </div>
                     <img class="model-display-mini-img" src="imgs/hyundai_tucson.png" alt="2004 Ford Taurus">
                     <p class="model-display-mini-specs">2.0L L4 | 140 hp @ 6000 rpm</p>
                 </div>
 
                 <div class="model-display-mini">
-                    <p class="model-display-mini-name">2007 Chrysler PT Cruiser</p>
+                    <div class="model-display-mini-name-wrapper">
+                        <p class="model-display-mini-name">2004 Ford Taurus</p>
+                        <div class="model-display-mini-underline"></div>
+                    </div>
                     <img class="model-display-mini-img" src="imgs/pt_cruiser.png" alt="2004 Ford Taurus">
                     <p class="model-display-mini-specs">2.4L L4 Turbo | 230 hp @ 5100 rpm</p>
                 </div>
