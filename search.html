@@ -1,6 +1,6 @@
 <!--
 Author: Emil Soleymani
-Last Modification: 2023-10-03
+Last Modification: 2023-10-12
 -->
 
 <!DOCTYPE html>
@@ -9,6 +9,7 @@ Last Modification: 2023-10-03
     <head>
         <title>CarDex | Search</title>
         <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/search.css">
         <meta charset="utf-8">
     </head>
 
@@ -29,11 +30,12 @@ Last Modification: 2023-10-03
 
         <p class="search-description-top">Search <span>over 1000</span> makes and models!</p>
 
+        <div class="search-results-description">
+            <img class="search-results-back-button" src="imgs/icons/back_arrow.png" alt="Back">
+            <p class="search-results-description-text">Showing <span>1-10</span> of <span>1000</span> results for <span>Porsche 911</span></p>
+        </div>
+
         <div class="search-results-wrapper">
-            <div class="search-results-description">
-                <img src="" alt="Back" class="search-results-back-button">
-                <p class="search-results-description-text">Showing <span>1-10</span> of <span>1000</span> results for <span>Porsche 911</span></p>
-            </div>
 
             <div class="filters-wrapper">
                 <div class="filters-header-wrapper">
@@ -121,7 +123,7 @@ Last Modification: 2023-10-03
                     <p class="model-display-quick-info"><span>(icon)</span> 3.6L naturally aspirated V6  | 272 @ 6100 rpm</p>
                     <p class="model-display-quick-info"><span>(icon)</span> 0 - 60mph: 5.4s</p>
                     <img src="imgs/porsche_911_993.jpeg" alt="Porsche 911 (993)" class="model-display-quick-img">
-                    <a href="" class="model-display-quick-learn-more">Learn More ></a>
+                    <a href="results.html?model=993" class="model-display-quick-learn-more">Learn More ></a>
                 </div>
             </div>
         </div>

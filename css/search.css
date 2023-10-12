@@ -1,0 +1,94 @@
+/*
+This file is used to store styles for the search page.
+
+Author: Emil Soleymani
+Date: 2023-10-12
+*/
+
+.search-description-top {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-weight: 100;
+}
+
+/** SEARCH RESULTS **/
+.search-results-description {
+    width: 30%;
+    margin-left: 10rem;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-weight: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search-results-back-button {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 2rem;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-results-back-button:hover {
+    opacity: 1;
+}
+
+.search-results-description-text {
+    margin-left: 0;
+}
+
+.search-results-description-text span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.search-results-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.results-wrapper {
+    flex: 4;
+}
+
+.filters-wrapper {
+    width: 80%;
+    height: max-content;
+    padding: 2rem 3rem;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.model-display-quick {
+    width: 40%;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    transition: all 0.3s ease-in-out;
+}
+
+.model-display-quick-img {
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+}
+
+.model-display-quick-img:hover {
+    opacity: 1;
+}
+/** SEARCH RESULTS **/

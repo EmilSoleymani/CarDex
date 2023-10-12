@@ -3,7 +3,7 @@ This file is used to store global css styles like fonts, colors, etc.
 Headers and footers are also stored here.
 
 Author: Emil Soleymani
-Date: 2023-10-03
+Date: 2023-10-12
 */
 
 :root {
@@ -98,8 +98,9 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     margin-left: 0;
+    margin-top: 5rem;
     background-color: var(--secondary-color);
-    color: var(--primary-color-light)
+    color: var(--primary-color-light);
 }
 
 .footer-social-img {
