@@ -75,40 +75,63 @@ Last Modification: 2023-10-12
                 <ul class="filters-list">
                     <li class="filter-item">
                         <p class="filter-item-text">Make</p>
-                        <select class="filter-item-dropdown">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
-                        </select>
+                        <div class="filter-item-select">
+                            <select>
+                              <option value="0">Select car:</option>
+                              <option value="1">Audi</option>
+                              <option value="2">BMW</option>
+                              <option value="3">Citroen</option>
+                              <option value="4">Ford</option>
+                              <option value="5">Honda</option>
+                              <option value="6">Jaguar</option>
+                              <option value="7">Land Rover</option>
+                              <option value="8">Mercedes</option>
+                              <option value="9">Mini</option>
+                              <option value="10">Nissan</option>
+                              <option value="11">Toyota</option>
+                              <option value="12">Volvo</option>
+                            </select>
+                        </div>
                     </li>
 
                     <li class="filter-item">
                         <p class="filter-item-text">Model</p>
                         <!-- This will have to be populated dynamically to make sense -->
-                        <select class="filter-item-dropdown">
-                            <option value="volvo">...</option>
-                        </select>
+                        <div class="filter-item-select">
+                            <select>
+                                <option value="0">Select model:</option>
+                                <option value="1">...</option>
+                            </select>
+                        </div>
                     </li>
 
                     <li class="filter-item">
                         <p class="filter-item-text">Min Year</p>
-                        <!-- Slider to select year -->
-                        <input type="range" min="1900" max="2024" value="1993" class="filter-item-slider">
-                        
                         <!-- This will have to be populated dynamically to make sense -->
-                        <p class="filter-item-value">1993</p>
+                        <div class="filter-item-select">
+                            <select>
+                                <option value="0">Any</option>
+                                <option value="1">2023</option>
+                                <option value="2">2022</option>
+                                <option value="3">2021</option>
+                            </select>
+                        </div>
                     </li>
                    
                     <li class="filter-item">
                         <p class="filter-item-text">Max Year</p>
-                        <!-- Slider to select year -->
-                        <input type="range" min="1900" max="2024" value="2023" class="filter-item-slider">
-                        
                         <!-- This will have to be populated dynamically to make sense -->
-                        <p class="filter-item-value">2023</p>
+                        <div class="filter-item-select">
+                            <select>
+                                <option value="0">Any</option>
+                                <option value="1">2023</option>
+                                <option value="2">2022</option>
+                                <option value="3">2021</option>
+                            </select>
+                        </div>
                     </li>
-
+                    
+                    <!-- REPLACE WITH SOMETHING LIKE https://codepen.io/predragdavidovic/pen/mdpMoWo WHEN I CAN USE JS -->
                     <li class="filter-item">
                         <p class="filter-item-text">Min Price</p>
                         <!-- Slider to select price -->
@@ -127,17 +150,24 @@ Last Modification: 2023-10-12
                         <p class="filter-item-value">$50,000</p>
                     </li>
 
-                    <li class="filter-item">
-                        <p class="filter-item-text">Transmission</p>
-                        <p class="filter-item-value">Automatic</p>
-                        <input type="checkbox" class="filter-item-checkbox">
+                    <li class="filter-item" id="transmission-filter-item">
+                        <p class="filter-item-text">Transmission:</p>
                         
-                        <p class="filter-item-value">Manual</p>
-                        <input type="checkbox" class="filter-item-checkbox">
+                        <div class="transmission-filter-item-row">
+                            <p class="filter-item-value">Automatic</p>
+                            <input type="checkbox" class="filter-item-checkbox" checked="checked">
+                        </div>
+                        
+                        <div class="transmission-filter-item-row">
+                            <p class="filter-item-value">Manual</p>
+                            <input type="checkbox" class="filter-item-checkbox">
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
+
+        <div id="filler-search-bottom"></div>
 
         <div class="footer-wrapper">
             <p class="footer-copyright"><span>&copy;</span> 2023 CarDex</p>
