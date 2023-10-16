@@ -68,9 +68,10 @@ Date: 2023-10-12
 }
 
 .trending-models-header {
-    margin-left: 4rem;
     color: var(--secondary-color);
     font-family: var(--font-family);
+    font-weight: 300;
+    text-align: center;
 }
 
 .trending-models-list {

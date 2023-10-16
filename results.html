@@ -9,6 +9,7 @@ Last Modification: 2023-10-03
     <head>
         <title>CarDex | Search</title>
         <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/results.css">
         <meta charset="utf-8">
     </head>
 
@@ -28,117 +29,121 @@ Last Modification: 2023-10-03
         </div>
 
         <div class="search-result-wrapper">
-            <a href="search.html">
-                <img src="" alt="Back" class="search-results-back-button">
-            </a>
+            <div class="search-result-header-wrapper">
+                <img class="search-result-back-button" onclick="history.back()" src="imgs/icons/back_arrow.png" alt="Back">
+                <h1 class="model-display-full-name">Porsche 911 (992)</h1>
+            </div>
+           
 
             <div class="model-display-full">
-                <h1 class="model-display-full-name">Porsche 911 (992)</h1>
                 <img src="imgs/porsche_911_992.png" alt="Porsche 911 (992)" class="model-display-full-img">
+                <table class="model-display-full-table">
+                    <!-- Create a table for specs of a car -->
+                    <tr>
+                        <th>Engine</th>
+                        <td>3.0L Twin Turbo Flat-6</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Power</th>
+                        <td>379 kW (510 hp)</td>
+                    </tr>
+    
+                    <tr>
+                        <th>0-100 km/h</th>
+                        <td>3.4 s</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Top Speed</th>
+                        <td>308 km/h</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Transmission</th>
+                        <td>8-Speed PDK</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Drivetrain</th>
+                        <td>RWD</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Price</th>
+                        <td>$ 100,000</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Weight</th>
+                        <td>1,500 kg</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Length</th>
+                        <td>4,519 mm</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Width</th>
+                        <td>1,852 mm</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Height</th>
+                        <td>1,300 mm</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Wheelbase</th>
+                        <td>2,450 mm</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Seats</th>
+                        <td>2</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Doors</th>
+                        <td>2</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Trunk</th>
+                        <td>132 L</td>
+                    </tr>
+    
+                    <tr>
+                        <th>MPG</th>
+                        <td>12.4 L/100km</td>
+                    </tr>
+    
+                    <tr>
+                        <th>CO2 Emissions</th>
+                        <td>283 g/km</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Market Segment</th>
+                        <td>Sports</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Body Style</th>
+                        <td>Coupe</td>
+                    </tr>
+    
+                    <tr>
+                        <th>Passengers</th>
+                        <td>2</td>
+                    </tr>
+                </table>
             </div>
+        </div>
 
-            <table class="model-display-full-table">
-                <!-- Create a table for specs of a car -->
-                <tr>
-                    <th>Engine</th>
-                    <td>3.0L Twin Turbo Flat-6</td>
-                </tr>
-
-                <tr>
-                    <th>Power</th>
-                    <td>379 kW (510 hp)</td>
-                </tr>
-
-                <tr>
-                    <th>0-100 km/h</th>
-                    <td>3.4 s</td>
-                </tr>
-
-                <tr>
-                    <th>Top Speed</th>
-                    <td>308 km/h</td>
-                </tr>
-
-                <tr>
-                    <th>Transmission</th>
-                    <td>8-Speed PDK</td>
-                </tr>
-
-                <tr>
-                    <th>Drivetrain</th>
-                    <td>RWD</td>
-                </tr>
-
-                <tr>
-                    <th>Price</th>
-                    <td>$ 100,000</td>
-                </tr>
-
-                <tr>
-                    <th>Weight</th>
-                    <td>1,500 kg</td>
-                </tr>
-
-                <tr>
-                    <th>Length</th>
-                    <td>4,519 mm</td>
-                </tr>
-
-                <tr>
-                    <th>Width</th>
-                    <td>1,852 mm</td>
-                </tr>
-
-                <tr>
-                    <th>Height</th>
-                    <td>1,300 mm</td>
-                </tr>
-
-                <tr>
-                    <th>Wheelbase</th>
-                    <td>2,450 mm</td>
-                </tr>
-
-                <tr>
-                    <th>Seats</th>
-                    <td>2</td>
-                </tr>
-
-                <tr>
-                    <th>Doors</th>
-                    <td>2</td>
-                </tr>
-
-                <tr>
-                    <th>Trunk</th>
-                    <td>132 L</td>
-                </tr>
-
-                <tr>
-                    <th>MPG</th>
-                    <td>12.4 L/100km</td>
-                </tr>
-
-                <tr>
-                    <th>CO2 Emissions</th>
-                    <td>283 g/km</td>
-                </tr>
-
-                <tr>
-                    <th>Market Segment</th>
-                    <td>Sports</td>
-                </tr>
-
-                <tr>
-                    <th>Body Style</th>
-                    <td>Coupe</td>
-                </tr>
-
-                <tr>
-                    <th>Passengers</th>
-                    <td>2</td>
-                </tr>
-            </table>
+        <div id="footer-space">
+            <!-- This is here so the footer doesn't overlap the content -->
         </div>
 
         <div class="footer-wrapper">

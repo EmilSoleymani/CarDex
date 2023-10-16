@@ -222,6 +222,7 @@ Date: 2023-10-12
 
 .model-display-quick-name {
     margin-bottom: 2rem;
+    font-weight: 300;
 }
 
 .model-display-quick-img {
@@ -296,3 +297,4 @@ Date: 2023-10-12
         font-size: smaller;
     }
 }
+/** Media Queries **/
