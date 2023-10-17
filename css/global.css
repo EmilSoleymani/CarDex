@@ -160,6 +160,10 @@ html {
 .footer-links a:hover {
     color: var(--primary-color);
 }
+
+.footer-space-global {
+    height: 0rem;
+}
 /**** FOOTER ****/
 
 /** MEDIA QUERIES **/
@@ -170,6 +174,12 @@ html {
 
     .footer-links {
         width: 50%;
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    .footer-space-global {
+        height: 5rem;
     }
 }
 /** MEDIA QUERIES **/
