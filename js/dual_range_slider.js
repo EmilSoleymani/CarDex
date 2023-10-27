@@ -1,5 +1,5 @@
-const SLIDER_BG = '#264F54'
-const RANGE_BG = '#F48961'
+const SLIDER_BG = '#55a7b2'
+const RANGE_BG = '#264F54'
 
 function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
     const [from, to] = getParsed(fromInput, toInput);
