@@ -1,3 +1,10 @@
+/*
+Author: Emil Soleymani
+Last Modification: 2023-10-26
+
+Code inspired by https://codepen.io/predragdavidovic/pen/mdpMoWo
+*/
+
 const SLIDER_BG = '#55a7b2'
 const RANGE_BG = '#264F54'
 
