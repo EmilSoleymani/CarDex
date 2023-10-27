@@ -69,7 +69,7 @@ function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
 }
 
 function setToggleAccessible(currentTarget) {
-  const toSlider = document.querySelector('#toSlider');
+  const toSlider = document.getElementById('toSlider');
   if (Number(currentTarget.value) <= 0 ) {
     toSlider.style.zIndex = 2;
   } else {
