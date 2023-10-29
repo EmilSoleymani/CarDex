@@ -53,7 +53,7 @@ Date: 2023-10-12
     margin-top: 2rem;
 }
 
-.results-wrapper {
+#results-wrapper {
     flex: 4;
 }
 

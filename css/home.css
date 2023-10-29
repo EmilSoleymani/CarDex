@@ -74,7 +74,7 @@ Date: 2023-10-12
     text-align: center;
 }
 
-.trending-models-list {
+#trending-models-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
