@@ -35,9 +35,10 @@ function populateResults() {
         // Fetch results from API
         fetch('http://localhost:3001/data/api.json')
             .then(response => response.json())
-            .then(data => {
-                // Filter data to contain elements where "make" or "model" is in the search or match the regex string of make or model
-                var filteredData = data.data.filter(d => d.make.toLowerCase().includes(params.get('search').toLowerCase()) || d.model.toLowerCase().includes(params.get('search').toLowerCase()));
+            .then(data => {    
+                // Filter data by testing the regular expression against make or model fields
+                let regex = new RegExp(params.get('search'));
+                var filteredData = data.data.filter(d => regex.test(d.make) || regex.test(d.model));
 
                 for (var d of filteredData) {
                     // Temporary: set d.img.src to ../imgs/porsche_911_993.jpg
