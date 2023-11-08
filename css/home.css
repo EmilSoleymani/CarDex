@@ -6,15 +6,16 @@ Date: 2023-10-12
 */
 
 /**** SEARCH BAR ****/
-.search-bar-wrapper {
+#search-bar-wrapper {
     width: 40%;
     margin: auto;
     padding: 10px;
-    margin-top: 4rem;
     font-size: large;
 }
 
 .search-bar-description {
+    margin-bottom: 4rem;
+    margin-top: 0.4rem;
     text-align: center;
     color: var(--secondary-color);
     font-family: var(--font-family);
