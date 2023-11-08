@@ -40,6 +40,10 @@ function populateResults() {
                 let regex = new RegExp(params.get('search'));
                 var filteredData = data.data.filter(d => regex.test(d.make) || regex.test(d.model));
 
+                // Update search-results-description
+                document.getElementById('search-results-count').innerHTML = filteredData.length
+                document.getElementById('search-results-search-param-label').innerHTML = params.get('search')
+
                 for (var d of filteredData) {
                     // Temporary: set d.img.src to ../imgs/porsche_911_993.jpg
                     d.img.src = '../imgs/porsche_911_993.jpeg'

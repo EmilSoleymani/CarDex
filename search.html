@@ -1,6 +1,6 @@
 <!--
 Author: Emil Soleymani
-Last Modification: 2023-10-26
+Last Modification: 2023-11-08
 -->
 
 <!DOCTYPE html>
@@ -25,7 +25,6 @@ Last Modification: 2023-10-26
             <nav class="header-nav-wrapper">    
                 <ul>
                     <li><a href="home.html">Home</a></li>
-                    <li><a id="selected" href="search.html">Search</a></li>
                     <li><a href="manufacturers.html">Manufacturers</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -46,7 +45,7 @@ Last Modification: 2023-10-26
 
         <div id="search-results-description">
             <img class="search-results-back-button" onclick="history.back()" src="imgs/icons/back_arrow.png" alt="Back">
-            <p class="search-results-description-text">Showing <span>1-10</span> of <span>1000</span> results for <span>Porsche 911</span></p>
+            <p class="search-results-description-text">Showing <span id="search-results-count">1000</span> results for <span id="search-results-search-param-label">Porsche 911</span></p>
         </div>
 
         <div id="search-results-wrapper">
