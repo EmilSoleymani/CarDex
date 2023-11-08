@@ -35,10 +35,12 @@ function populateResults() {
         // Fetch results from API
         fetch('http://localhost:3001/data/api.json')
             .then(response => response.json())
-            .then(data => {    
+            .then(data => {
+                // Remove encoding from search param
+                var search = decodeURIComponent(params.get('search'));
                 // Filter data by testing the regular expression against make or model fields
-                let regex = new RegExp(params.get('search'));
-                var filteredData = data.data.filter(d => regex.test(d.make) || regex.test(d.model));
+                let regex = new RegExp(search);
+                var filteredData = data.data.filter(d => regex.test(d.make + ' ' + d.model));
 
                 // Update search-results-description
                 document.getElementById('search-results-count').innerHTML = filteredData.length
@@ -55,7 +57,7 @@ function populateResults() {
                     // Create a new h1 with class "model-display-quickname"
                     var h1 = document.createElement('h1');
                     h1.className = "model-display-quick-name";
-                    // Set innerHtml of h1 to d.make + ' ' + d.model
+                    // Set innerHtml of h1 to d.year + ' ' d.make + ' ' + d.model
                     h1.innerHTML = d.make + ' ' + d.model;
                     // Add h1 to div
                     div.appendChild(h1);
@@ -71,7 +73,7 @@ function populateResults() {
                     // Create p with class "model-display-quick-info" and set innerHTML to d.specs.engine + ' | ' + d.specs.maxHorsepower
                     var p1 = document.createElement('p');
                     p1.className = "model-display-quick-info";
-                    p1.innerHTML = d.specs.engine + ' | ' + d.specs.maxHorsepower;
+                    p1.innerHTML = d.specs.engine + ' | ' + d.specs.power;
                     // Add img and p to info1
                     info1.appendChild(img1);
                     info1.appendChild(p1);
@@ -87,7 +89,7 @@ function populateResults() {
                     // Create p with class "model-display-quick-info" and set innerHTML to '0-60mph: ' + d.specs.zeroToSixty
                     var p2 = document.createElement('p');
                     p2.className = "model-display-quick-info";
-                    p2.innerHTML = '0-60mph: ' + d.specs.zeroToSixty;
+                    p2.innerHTML = '0-60 mph: ' + d.specs.zeroToSixty;
                     // Add img and p to info2
                     info2.appendChild(img2);
                     info2.appendChild(p2);
