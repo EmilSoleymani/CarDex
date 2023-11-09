@@ -108,7 +108,7 @@ function populateResults() {
                     }
                     // Create a href with a query string for make and model and class "model-display-quick-learn-more" and innerHTML of "Learn More"
                     var a = document.createElement('a');
-                    a.href = "results.html?search=" + d.make.toLowerCase() + '-' + d.model.toLowerCase();
+                    a.href = "results.html?search=" + encodeURIComponent(d.year + ' ' + d.make + ' ' + d.model);
                     a.className = "model-display-quick-learn-more";
                     a.innerHTML = "Learn More";
                     // Add img and a to div

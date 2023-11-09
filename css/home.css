@@ -89,6 +89,7 @@ Date: 2023-10-12
     background-color: var(--secondary-color);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .model-display-mini:hover {
@@ -126,8 +127,8 @@ Date: 2023-10-12
 }
 
 .model-display-mini img {
-    height: 15rem;
-    border-radius: 1rem 1rem 0 0;
+    width: 20rem;
+    margin: auto;
     opacity: 0.9;
     transition: all 0.3s ease-in-out;
 }
