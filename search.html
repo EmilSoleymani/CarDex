@@ -92,7 +92,7 @@ Last Modification: 2023-11-08
                         <p class="filter-item-text">Min Year</p>
                         <!-- This will have to be populated dynamically to make sense -->
                         <div class="filter-item-select">
-                            <select>
+                            <select id="min-year-filter-select">
                                 <option value="0">Any</option>
                                 <option value="1">2023</option>
                                 <option value="2">2022</option>
@@ -105,7 +105,7 @@ Last Modification: 2023-11-08
                         <p class="filter-item-text">Max Year</p>
                         <!-- This will have to be populated dynamically to make sense -->
                         <div class="filter-item-select">
-                            <select>
+                            <select id="max-year-filter-select">
                                 <option value="0">Any</option>
                                 <option value="1">2023</option>
                                 <option value="2">2022</option>
@@ -116,17 +116,21 @@ Last Modification: 2023-11-08
 
                     <li class="range-slider-container">
                         <div class="range-slider-control">
-                            <input id="fromSlider" type="range" value="10000" min="0" max="300000"/>
-                            <input id="toSlider" type="range" value="100000" min="0" max="300000"/>
+                            <input id="fromSlider" type="range" value="0" min="0" max="300000"/>
+                            <input id="toSlider" type="range" value="300000" min="0" max="300000"/>
                          </div>
                          <div class="range-slider-form-control">
                            <div class="range-slider-form-control-container">
                                <div class="range-slider-form-control-time">Min</div>
-                               <input class="range-slider-form-control-time-input" type="number" id="fromInput" value="10" min="0" max="100"/>
+                               <div class="range-slider-form-control-time-input-wrapper">
+                                   <input class="range-slider-form-control-time-input" type="number" id="fromInput" value="0" min="0" max="100"/>
+                               </div>
                              </div>
                              <div class="range-slider-form-control-container">
                                <div class="range-slider-form-control-time">Max</div>
-                               <input class="range-slider-form-control-time-input" type="number" id="toInput" value="30" min="0" max="100"/>
+                               <div class="range-slider-form-control-time-input-wrapper">
+                                   <input class="range-slider-form-control-time-input" type="number" id="toInput" value="300000" min="0" max="100"/>
+                               </div>
                              </div>
                          </div>
                     </li>

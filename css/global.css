@@ -196,11 +196,9 @@ html {
 .range-slider-form-control input[type="number"] {
     color: var(--text-color-light);
     width: 5rem;
-    padding: 0.5rem;
     font-size: medium;
     font-weight: 200;
     border: none;
-    text-align: center;
 }
 
 .range-slider-form-control input[type="number"]:hover {
@@ -222,6 +220,16 @@ html {
     margin-top: 1rem;
     position: absolute;
     pointer-events: none;
+}
+
+.range-slider-form-control-time-input-wrapper::before {
+    content: '$';
+    color: var(--text-color-light);
+    font-weight: 300;
+}
+
+.range-slider-form-control-time-input-wrapper{
+    padding: 0.5rem;
 }
 
 #fromSlider {

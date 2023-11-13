@@ -46,6 +46,13 @@ function populateResults() {
                 document.getElementById('search-results-count').innerHTML = filteredData.length
                 document.getElementById('search-results-search-param-label').innerHTML = params.get('search')
 
+                // Update filters to make sense with the search results
+                var minYear = Math.min(...filteredData.map(d => d.year));
+                var maxYear = Math.max(...filteredData.map(d => d.year));
+                updateYearFilter(minYear, maxYear);
+                var maxPrice = Math.max(...filteredData.map(d => d.price));
+                updatePriceSlider(maxPrice);
+
                 for (var d of filteredData) {
                     // Temporary: set d.img.src to ../imgs/porsche_911_993.jpg
                     d.img.src = '../imgs/porsche_911_993.jpeg'
@@ -122,6 +129,58 @@ function populateResults() {
                 console.error('Error fetching the JSON file:', error);
                 // Handle any errors here
             });
+    }
+}
+
+/*
+ * Updates the year filter to make sense with the search results.
+ * @param {number} minYear - The minimum year in the search results.
+ * @param {number} maxYear - The maximum year in the search results.
+ * @return {void}
+ * @example
+ * updateYearFilter(1990, 2020); // Updates the year filter to include options from 1990 to 2020.
+ */
+function updateYearFilter(minYear, maxYear) {
+    // Get minYearSelect and maxYearSelect elements
+    var minYearSelect = document.getElementById('min-year-filter-select');
+    var maxYearSelect = document.getElementById('max-year-filter-select');
+    
+    // Clear minYearSelect and maxYearSelect
+    minYearSelect.innerHTML = '';
+    maxYearSelect.innerHTML = '';
+
+    // Add 'Any' option to minYearSelect and maxYearSelect
+    var option = document.createElement('option');
+    option.value = 0;
+    option.innerHTML = 'Any';
+    minYearSelect.appendChild(option);
+    var option = document.createElement('option');
+    option.value = 0;
+    option.innerHTML = 'Any';
+    maxYearSelect.appendChild(option);
+
+    // Add options for each year from minYear to maxYear
+    for (var i = minYear; i <= maxYear; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.innerHTML = i;
+        minYearSelect.appendChild(option);
+        var option = document.createElement('option');
+        option.value = i;
+        option.innerHTML = i;
+        maxYearSelect.appendChild(option);
+    }
+}
+
+/*
+ * Updates the price slider's max price value if the max price possible on slider is less than the current max price.
+ */
+function updatePriceSlider(maxPrice) {
+    var toSlider = document.getElementById('toSlider');
+    var fromSlider = document.getElementById('fromSlider');
+    if (toSlider.max < maxPrice) {
+        toSlider.max = maxPrice;
+        fromSlider.max = maxPrice;
     }
 }
 
