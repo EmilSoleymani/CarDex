@@ -90,27 +90,17 @@ Last Modification: 2023-11-08
                 <ul class="filters-list">
                     <li class="filter-item">
                         <p class="filter-item-text">Min Year</p>
-                        <!-- This will have to be populated dynamically to make sense -->
+                        <!-- This is populated dynamically -->
                         <div class="filter-item-select">
-                            <select id="min-year-filter-select">
-                                <option value="0">Any</option>
-                                <option value="1">2023</option>
-                                <option value="2">2022</option>
-                                <option value="3">2021</option>
-                            </select>
+                            <select id="min-year-filter-select"></select>
                         </div>
                     </li>
                    
                     <li class="filter-item">
                         <p class="filter-item-text">Max Year</p>
-                        <!-- This will have to be populated dynamically to make sense -->
+                        <!-- This is populated dynamically -->
                         <div class="filter-item-select">
-                            <select id="max-year-filter-select">
-                                <option value="0">Any</option>
-                                <option value="1">2023</option>
-                                <option value="2">2022</option>
-                                <option value="3">2021</option>
-                            </select>
+                            <select id="max-year-filter-select"></select>
                         </div>
                     </li>
 
@@ -140,12 +130,12 @@ Last Modification: 2023-11-08
                         
                         <div class="transmission-filter-item-row">
                             <p class="filter-item-value">Automatic</p>
-                            <input type="checkbox" class="filter-item-checkbox" checked="checked">
+                            <input type="checkbox" class="filter-item-checkbox" checked="checked" id="automatic-transmission">
                         </div>
                         
                         <div class="transmission-filter-item-row">
                             <p class="filter-item-value">Manual</p>
-                            <input type="checkbox" class="filter-item-checkbox">
+                            <input type="checkbox" class="filter-item-checkbox" id="manual-transmission">
                         </div>
                     </li>
                 </ul>
