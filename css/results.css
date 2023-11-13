@@ -17,7 +17,7 @@
     opacity: 1;
 }
 
-.model-display-full-name {
+#model-display-full-name {
     font-family: var(--font-family);
     color: var(--secondary-color);
     margin: auto;
@@ -25,7 +25,7 @@
     font-weight: 400;
 }
 
-.model-display-full {
+#model-display-full {
     width: 80%;
     background-color: var(--secondary-color);
     margin: auto;
