@@ -9,7 +9,6 @@ $(document).ready(function() {
         method: 'GET',
         dataType: 'json',
         success: function(data) {
-            console.log(data);
             $.each(data, function(index, d) {
                 addTrendingModel($('#trending-models-list'), d);
             });
