@@ -1,6 +1,6 @@
 <!--
 Author: Emil Soleymani
-Last Modification: 2023-10-26
+Last Modification: 2023-11-08
 -->
 
 <!DOCTYPE html>
@@ -10,18 +10,21 @@ Last Modification: 2023-10-26
         <title>CarDex | Search</title>
         <link rel="stylesheet" type="text/css" href="css/global.css">
         <link rel="stylesheet" type="text/css" href="css/search.css">
+        <!-- For copying search bar styles -->
+        <link rel="stylesheet" type="text/css" href="css/home.css">
         <script type="text/javascript" src="js/dual_range_slider.js" defer></script>
         <meta charset="utf-8">
     </head>
 
     <body>
+        <script type="text/javascript" src="js/search.js"></script>
+
         <div class="header-wrapper">
             <img class="header-logo" src="imgs/header_logo.png" alt="CarDex Logo">
 
             <nav class="header-nav-wrapper">    
                 <ul>
                     <li><a href="home.html">Home</a></li>
-                    <li><a id="selected" href="search.html">Search</a></li>
                     <li><a href="manufacturers.html">Manufacturers</a></li>
                     <li><a href="about_us.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -31,13 +34,23 @@ Last Modification: 2023-10-26
 
         <p class="search-description-top">Search <span>over 1000</span> makes and models!</p>
 
-        <div class="search-results-description">
-            <img class="search-results-back-button" onclick="history.back()" src="imgs/icons/back_arrow.png" alt="Back">
-            <p class="search-results-description-text">Showing <span>1-10</span> of <span>1000</span> results for <span>Porsche 911</span></p>
+        <div id="search-bar-wrapper">
+            <div class="search-bar">
+                <form action="search.html" method="get" autocomplete="off">
+                    <input type="text" name="search" placeholder="Search for a car model...">
+                    <input class="search-bar-btn" type="submit" value="→">
+                </form>
+            </div>
         </div>
 
-        <div class="search-results-wrapper">
+        <div id="search-results-description">
+            <img class="search-results-back-button" onclick="history.back()" src="imgs/icons/back_arrow.png" alt="Back">
+            <p class="search-results-description-text">Showing <span id="search-results-count">0</span> results for <span id="search-results-search-param-label"></span></p>
+        </div>
+
+        <div id="search-results-wrapper">
             <div id="results-wrapper">
+                <!-- KEEPING OLD HARDCODED RESULTS AS REFERENCE
                 <div class="model-display-quick">
                     <h1 class="model-display-quick-name">Porsche 911 (992)</h1>
                     <div class="model-display-quick-info-wrapper">
@@ -65,9 +78,10 @@ Last Modification: 2023-10-26
                     <img src="imgs/porsche_911_993.jpeg" alt="Porsche 911 (993)" class="model-display-quick-img">
                     <a href="results.html?model=porsche_911_993" class="model-display-quick-learn-more">Learn More</a>
                 </div>
+                -->
             </div>
 
-            <div class="filters-wrapper">
+            <div id="filters-wrapper">
                 <div class="filters-header-wrapper">
                     <img src="imgs/icons/filters.png" alt="Filter Icon" class="filters-header-icon">
                     <p class="filters-header-text">Filters</p>
@@ -76,43 +90,37 @@ Last Modification: 2023-10-26
                 <ul class="filters-list">
                     <li class="filter-item">
                         <p class="filter-item-text">Min Year</p>
-                        <!-- This will have to be populated dynamically to make sense -->
+                        <!-- This is populated dynamically -->
                         <div class="filter-item-select">
-                            <select>
-                                <option value="0">Any</option>
-                                <option value="1">2023</option>
-                                <option value="2">2022</option>
-                                <option value="3">2021</option>
-                            </select>
+                            <select id="min-year-filter-select"></select>
                         </div>
                     </li>
                    
                     <li class="filter-item">
                         <p class="filter-item-text">Max Year</p>
-                        <!-- This will have to be populated dynamically to make sense -->
+                        <!-- This is populated dynamically -->
                         <div class="filter-item-select">
-                            <select>
-                                <option value="0">Any</option>
-                                <option value="1">2023</option>
-                                <option value="2">2022</option>
-                                <option value="3">2021</option>
-                            </select>
+                            <select id="max-year-filter-select"></select>
                         </div>
                     </li>
 
                     <li class="range-slider-container">
                         <div class="range-slider-control">
-                            <input id="fromSlider" type="range" value="10000" min="0" max="300000"/>
-                            <input id="toSlider" type="range" value="100000" min="0" max="300000"/>
+                            <input id="fromSlider" type="range" value="0" min="0" max="300000"/>
+                            <input id="toSlider" type="range" value="300000" min="0" max="300000"/>
                          </div>
                          <div class="range-slider-form-control">
                            <div class="range-slider-form-control-container">
                                <div class="range-slider-form-control-time">Min</div>
-                               <input class="range-slider-form-control-time-input" type="number" id="fromInput" value="10" min="0" max="100"/>
+                               <div class="range-slider-form-control-time-input-wrapper">
+                                   <input class="range-slider-form-control-time-input" type="number" id="fromInput" value="0" min="0" max="100"/>
+                               </div>
                              </div>
                              <div class="range-slider-form-control-container">
                                <div class="range-slider-form-control-time">Max</div>
-                               <input class="range-slider-form-control-time-input" type="number" id="toInput" value="30" min="0" max="100"/>
+                               <div class="range-slider-form-control-time-input-wrapper">
+                                   <input class="range-slider-form-control-time-input" type="number" id="toInput" value="300000" min="0" max="100"/>
+                               </div>
                              </div>
                          </div>
                     </li>
@@ -122,12 +130,12 @@ Last Modification: 2023-10-26
                         
                         <div class="transmission-filter-item-row">
                             <p class="filter-item-value">Automatic</p>
-                            <input type="checkbox" class="filter-item-checkbox" checked="checked">
+                            <input type="checkbox" class="filter-item-checkbox" checked="checked" id="automatic-transmission">
                         </div>
                         
                         <div class="transmission-filter-item-row">
                             <p class="filter-item-value">Manual</p>
-                            <input type="checkbox" class="filter-item-checkbox">
+                            <input type="checkbox" class="filter-item-checkbox" id="manual-transmission">
                         </div>
                     </li>
                 </ul>

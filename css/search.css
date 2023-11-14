@@ -14,7 +14,7 @@ Date: 2023-10-12
 }
 
 /** SEARCH RESULTS **/
-.search-results-description {
+#search-results-description {
     width: 30%;
     margin-left: 10rem;
     color: var(--secondary-color);
@@ -45,7 +45,7 @@ Date: 2023-10-12
     text-decoration: underline;
 }
 
-.search-results-wrapper {
+#search-results-wrapper {
     width: 90%;
     display: flex;
     justify-content: space-evenly;
@@ -57,7 +57,7 @@ Date: 2023-10-12
     flex: 4;
 }
 
-.filters-wrapper {
+#filters-wrapper {
     width: max-content;
     height: max-content;
     padding: 2rem 3rem;
@@ -68,7 +68,7 @@ Date: 2023-10-12
     cursor: pointer;
 }
 
-.filters-wrapper:hover {
+#filters-wrapper:hover {
     color: var(--text-color);
 }
 
@@ -256,20 +256,20 @@ Date: 2023-10-12
 
 /** Media Queries **/
 @media only screen and (max-width: 1300px) {
-    .search-results-description {
+    #search-results-description {
         width: 40%;
         margin-left: 5rem;
     }
 
-    .search-results-wrapper {
+    #search-results-wrapper {
         width: 95%;
     }
 
-    .filters-wrapper {
+    #filters-wrapper {
         padding: 1rem 2rem;
     }
 
-    .filters-wrapper ul li p {
+    #filters-wrapper ul li p {
         font-size: smaller;
     }
 }
