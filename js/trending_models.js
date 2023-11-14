@@ -1,3 +1,8 @@
+/*
+Author: Emil Soleymani
+Last Modification: 2023-11-13
+*/
+
 function addTrendingModel(trendingModelsList, data) {
     data.img.src = '../imgs/porsche_911_993.jpeg'; // Temporary: set data.img.src to ../imgs/porsche_911_993.jpg
 

@@ -1,4 +1,9 @@
 /*
+Author: Emil Soleymani
+Last Modification: 2023-11-13
+*/
+
+/*
  * Displays the results of a search query on the results page
  */
 function displayResultData(search) {
