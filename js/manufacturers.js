@@ -30,8 +30,11 @@ $(document).ready(function() {
             window.location.href = 'search.html?search=' + searchQuery;
         });
 
-        // Create img with class="manufacturer-img" src="imgs/manufacturer_logos/name.png" alt=name + " logo"
-        var img = $('<img>').addClass('manufacturer-img').attr('src', 'imgs/manufacturer_logos/' + name + '.png').attr('alt', name + ' logo');
+        // Replace spaces in name with underscores for the image filename
+        var imgSrc = 'imgs/manufacturer_logos/' + name.replace(/\s+/g, '_') + '.png';
+
+        // Create img with class="manufacturer-img" src=imgSrc alt=name + " logo"
+        var img = $('<img>').addClass('manufacturer-img').attr('src', imgSrc).attr('alt', name + ' logo');
 
         // Create p with class="manufacturer-name" and set innerHTML to name
         var nameP = $('<p>').addClass('manufacturer-name').html(name);
