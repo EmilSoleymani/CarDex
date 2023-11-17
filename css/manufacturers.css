@@ -36,10 +36,10 @@
 }
 
 .manufacturer-img {
-    width: fit-content;
-    height: fit-content;
+    /* fit Image content in div */
+    max-width: 50%;
+    max-height: 50%;
     margin: auto;
-    border-radius: 1rem;
     opacity: 0.7;
     transition: all 0.3s ease-in-out;
 }
