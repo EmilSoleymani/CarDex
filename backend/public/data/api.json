@@ -1,0 +1,765 @@
+{
+  "metadata": {
+    "name": "Mock Car API",
+    "author": "Emil Soleymani",
+    "date": "Nov-8-2023"
+  },
+  "data": [
+    {
+      "make": "BMW",
+      "model": "M3",
+      "year": "1998",
+      "price": "71000",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "BMW M3"
+      },
+      "specs": {
+        "engine": "3.2L Naturally Aspirated L6",
+        "power": "321 hp",
+        "torque": "350 Nm",
+        "transmission": "5-Speed Manual",
+        "zeroToSixty": "5.1 seconds",
+        "topSpeed": "155 mph",
+        "curbWeight": "1460 kg",
+        "fuelEconomy": "20 mpg",
+        "seatingCapacity": "5",
+        "fuelCapacity": "63 liters",
+        "wheelbase": "2731 mm"
+      },
+      "search_history": [
+        "2023-11-09T00:37:33.759Z",
+        "2023-11-09T00:37:34.522Z"
+      ]
+    },
+    {
+      "make": "Porsche",
+      "model": "911 (993)",
+      "year": "1994",
+      "price": "85000",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Porsche 911 (993)"
+      },
+      "specs": {
+        "engine": "3.6L Naturally Aspirated L6",
+        "power": "272 hp",
+        "torque": "340 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "5.4 seconds",
+        "topSpeed": "168 mph",
+        "curbWeight": "1370 kg",
+        "fuelEconomy": "18 mpg",
+        "seatingCapacity": "4",
+        "fuelCapacity": "73 liters",
+        "wheelbase": "2272 mm"
+      },
+      "search_history": [
+        "2023-11-09T00:16:33.260Z",
+        "2023-11-09T00:26:19.959Z"
+      ]
+    },
+    {
+      "make": "Acura",
+      "model": "NSX",
+      "year": "2021",
+      "price": "157500",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Acura NSX"
+      },
+      "specs": {
+        "engine": "3.5L Twin-Turbo V6",
+        "power": "573 hp",
+        "torque": "645 Nm",
+        "transmission": "9-Speed Dual-Clutch",
+        "zeroToSixty": "2.7 seconds",
+        "topSpeed": "191 mph",
+        "curbWeight": "1725 kg",
+        "fuelEconomy": "21 mpg city / 22 mpg highway",
+        "seatingCapacity": "2",
+        "fuelCapacity": "59 liters",
+        "wheelbase": "2630 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Alfa Romeo",
+      "model": "Giulia Quadrifoglio",
+      "year": "2021",
+      "price": "75000",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Alfa Romeo Giulia Quadrifoglio"
+      },
+      "specs": {
+        "engine": "2.9L Twin-Turbocharged V6",
+        "power": "505 hp",
+        "torque": "600 Nm",
+        "transmission": "8-Speed Automatic",
+        "zeroToSixty": "3.8 seconds",
+        "topSpeed": "191 mph",
+        "curbWeight": "1585 kg",
+        "fuelEconomy": "17 mpg city / 25 mpg highway",
+        "seatingCapacity": "5",
+        "fuelCapacity": "58 liters",
+        "wheelbase": "2820 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Aston Martin",
+      "model": "DB11",
+      "year": "2018",
+      "price": "198995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Aston Martin DB11"
+      },
+      "specs": {
+        "engine": "5.2L Twin-Turbocharged V12",
+        "power": "630 hp",
+        "torque": "700 Nm",
+        "transmission": "8-Speed Automatic",
+        "zeroToSixty": "3.7 seconds",
+        "topSpeed": "208 mph",
+        "curbWeight": "1875 kg",
+        "fuelEconomy": "18 mpg city / 24 mpg highway",
+        "seatingCapacity": "4",
+        "fuelCapacity": "78 liters",
+        "wheelbase": "2805 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Audi",
+      "model": "R8",
+      "year": "2008",
+      "price": "115400",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Audi R8"
+      },
+      "specs": {
+        "engine": "4.2L V8 FSI",
+        "power": "420 hp",
+        "torque": "430 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "4.4 seconds",
+        "topSpeed": "187 mph",
+        "curbWeight": "1565 kg",
+        "fuelEconomy": "17 mpg",
+        "seatingCapacity": "2",
+        "fuelCapacity": "90 liters",
+        "wheelbase": "2650 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Corvette Stingray",
+      "year": "2020",
+      "price": "59995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Chevrolet Corvette Stingray"
+      },
+      "specs": {
+        "engine": "6.2L V8 LT2",
+        "power": "495 hp",
+        "torque": "637 Nm",
+        "transmission": "8-Speed Dual-Clutch",
+        "zeroToSixty": "2.9 seconds",
+        "topSpeed": "194 mph",
+        "curbWeight": "1640 kg",
+        "fuelEconomy": "15 mpg",
+        "seatingCapacity": "2",
+        "fuelCapacity": "70 liters",
+        "wheelbase": "2710 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Chrysler",
+      "model": "PT Cruiser",
+      "year": "2007",
+      "price": "18995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Chrysler PT Cruiser"
+      },
+      "specs": {
+        "engine": "2.4L Naturally Aspirated I4",
+        "power": "150 hp",
+        "torque": "210 Nm",
+        "transmission": "4-Speed Automatic",
+        "zeroToSixty": "10.5 seconds",
+        "topSpeed": "112 mph",
+        "curbWeight": "1420 kg",
+        "fuelEconomy": "20 mpg",
+        "seatingCapacity": "5",
+        "fuelCapacity": "58 liters",
+        "wheelbase": "2630 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Dodge",
+      "model": "Challenger SRT Hellcat",
+      "year": "2019",
+      "price": "58995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Dodge Challenger SRT Hellcat"
+      },
+      "specs": {
+        "engine": "6.2L Supercharged HEMI V8",
+        "power": "717 hp",
+        "torque": "881 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "3.4 seconds",
+        "topSpeed": "199 mph",
+        "curbWeight": "2032 kg",
+        "fuelEconomy": "13 mpg city / 22 mpg highway",
+        "seatingCapacity": "5",
+        "fuelCapacity": "70 liters",
+        "wheelbase": "2946 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Ferrari",
+      "model": "F355",
+      "year": "1995",
+      "price": "269900",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Ferrari F355"
+      },
+      "specs": {
+        "engine": "3.5L V8 DOHC",
+        "power": "375 hp",
+        "torque": "363 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "4.7 seconds",
+        "topSpeed": "183 mph",
+        "curbWeight": "1350 kg",
+        "fuelEconomy": "15 mpg",
+        "seatingCapacity": "2",
+        "fuelCapacity": "82 liters",
+        "wheelbase": "2450 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Ford",
+      "model": "Mustang GT",
+      "year": "2015",
+      "price": "33995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Ford Mustang GT"
+      },
+      "specs": {
+        "engine": "5.0L V8",
+        "power": "435 hp",
+        "torque": "542 Nm",
+        "transmission": "6-Speed Automatic",
+        "zeroToSixty": "4.3 seconds",
+        "topSpeed": "155 mph",
+        "curbWeight": "1720 kg",
+        "fuelEconomy": "15 mpg",
+        "seatingCapacity": "4",
+        "fuelCapacity": "61 liters",
+        "wheelbase": "2720 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Ford",
+      "model": "Tauarus",
+      "year": "2004",
+      "price": "18995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Ford Tauarus"
+      },
+      "specs": {
+        "engine": "3.0L Naturally Aspirated V6",
+        "power": "155 hp",
+        "torque": "210 Nm",
+        "transmission": "4-Speed Automatic",
+        "zeroToSixty": "10.5 seconds",
+        "topSpeed": "112 mph",
+        "curbWeight": "1420 kg",
+        "fuelEconomy": "20 mpg",
+        "seatingCapacity": "5",
+        "fuelCapacity": "58 liters",
+        "wheelbase": "2630 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Honda",
+      "model": "Civic Type R",
+      "year": "2019",
+      "price": "36995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Honda Civic Type R"
+      },
+      "specs": {
+        "engine": "2.0L Turbocharged I4",
+        "power": "306 hp",
+        "torque": "400 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "5.7 seconds",
+        "topSpeed": "169 mph",
+        "curbWeight": "1382 kg",
+        "fuelEconomy": "22 mpg city / 28 mpg highway",
+        "seatingCapacity": "4",
+        "fuelCapacity": "50 liters",
+        "wheelbase": "2700 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Hyundai",
+      "model": "Tucson",
+      "year": "2004",
+      "price": "18995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Hyundai Tucson"
+      },
+      "specs": {
+        "engine": "2.0L Naturally Aspirated I4",
+        "power": "140 hp",
+        "torque": "184 Nm",
+        "transmission": "4-Speed Automatic",
+        "zeroToSixty": "10.5 seconds",
+        "topSpeed": "112 mph",
+        "curbWeight": "1420 kg",
+        "fuelEconomy": "20 mpg",
+        "seatingCapacity": "5",
+        "fuelCapacity": "58 liters",
+        "wheelbase": "2630 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Jaguar",
+      "model": "F-TYPE R",
+      "year": "2022",
+      "price": "103200",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Jaguar F-TYPE R"
+      },
+      "specs": {
+        "engine": "5.0L Supercharged V8",
+        "power": "575 hp",
+        "torque": "700 Nm",
+        "transmission": "8-Speed Automatic",
+        "zeroToSixty": "3.5 seconds",
+        "topSpeed": "186 mph",
+        "curbWeight": "1735 kg",
+        "fuelEconomy": "16 mpg city / 24 mpg highway",
+        "seatingCapacity": "2",
+        "fuelCapacity": "70 liters",
+        "wheelbase": "2622 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Lamborghini",
+      "model": "Huracán EVO",
+      "year": "2021",
+      "price": "261274",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Lamborghini Huracán EVO"
+      },
+      "specs": {
+        "engine": "5.2L V10",
+        "power": "631 hp",
+        "torque": "600 Nm",
+        "transmission": "7-Speed Dual-Clutch",
+        "zeroToSixty": "2.9 seconds",
+        "topSpeed": "202 mph",
+        "curbWeight": "1422 kg",
+        "fuelEconomy": "13 mpg city / 18 mpg highway",
+        "seatingCapacity": "2",
+        "fuelCapacity": "83 liters",
+        "wheelbase": "2620 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Lotus",
+      "model": "Evora GT",
+      "year": "2021",
+      "price": "99990",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Lotus Evora GT"
+      },
+      "specs": {
+        "engine": "3.5L Supercharged V6",
+        "power": "416 hp",
+        "torque": "430 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "3.8 seconds",
+        "topSpeed": "188 mph",
+        "curbWeight": "1395 kg",
+        "fuelEconomy": "17 mpg city / 26 mpg highway",
+        "seatingCapacity": "2",
+        "fuelCapacity": "60 liters",
+        "wheelbase": "2575 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Mazda",
+      "model": "MX-5 Miata",
+      "year": "2022",
+      "price": "26830",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Mazda MX-5 Miata"
+      },
+      "specs": {
+        "engine": "2.0L Naturally Aspirated I4",
+        "power": "181 hp",
+        "torque": "205 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "5.8 seconds",
+        "topSpeed": "135 mph",
+        "curbWeight": "1113 kg",
+        "fuelEconomy": "26 mpg city / 35 mpg highway",
+        "seatingCapacity": "2",
+        "fuelCapacity": "45 liters",
+        "wheelbase": "2310 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "AMG GT",
+      "year": "2016",
+      "price": "112400",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Mercedes-Benz AMG GT"
+      },
+      "specs": {
+        "engine": "4.0L Twin-Turbo V8",
+        "power": "469 hp",
+        "torque": "465 Nm",
+        "transmission": "7-Speed Dual-Clutch",
+        "zeroToSixty": "3.9 seconds",
+        "topSpeed": "189 mph",
+        "curbWeight": "1545 kg",
+        "fuelEconomy": "16 mpg city / 22 mpg highway",
+        "seatingCapacity": "2",
+        "fuelCapacity": "65 liters",
+        "wheelbase": "2630 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Nissan",
+      "model": "GT-R NISMO",
+      "year": "2017",
+      "price": "175540",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Nissan GT-R NISMO"
+      },
+      "specs": {
+        "engine": "3.8L Twin-Turbo V6",
+        "power": "600 hp",
+        "torque": "652 Nm",
+        "transmission": "6-Speed Dual-Clutch",
+        "zeroToSixty": "2.5 seconds",
+        "topSpeed": "196 mph",
+        "curbWeight": "1720 kg",
+        "fuelEconomy": "16 mpg",
+        "seatingCapacity": "4",
+        "fuelCapacity": "74 liters",
+        "wheelbase": "2780 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Porsche",
+      "model": "911 Carrera",
+      "year": "1989",
+      "price": "71000",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Porsche 911 Carrera 1989"
+      },
+      "specs": {
+        "engine": "3.2L Naturally Aspirated Flat-6",
+        "power": "214 hp",
+        "torque": "267 Nm",
+        "transmission": "5-Speed Manual",
+        "zeroToSixty": "5.7 seconds",
+        "topSpeed": "152 mph",
+        "curbWeight": "1210 kg",
+        "fuelEconomy": "20 mpg",
+        "seatingCapacity": "4",
+        "fuelCapacity": "80 liters",
+        "wheelbase": "2272 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Porsche",
+      "model": "911 Carrera 4S (992)",
+      "year": "2019",
+      "price": "120600",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Porsche 911 Carrera 4S 992"
+      },
+      "specs": {
+        "engine": "3.0L Twin-Turbo Flat-6",
+        "power": "443 hp",
+        "torque": "530 Nm",
+        "transmission": "8-Speed PDK",
+        "zeroToSixty": "3.2 seconds",
+        "topSpeed": "190 mph",
+        "curbWeight": "1550 kg",
+        "fuelEconomy": "23 mpg",
+        "seatingCapacity": "4",
+        "fuelCapacity": "67 liters",
+        "wheelbase": "2450 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Porsche",
+      "model": "911 Carrera S (991)",
+      "year": "2012",
+      "price": "96400",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Porsche 911 Carrera S 991"
+      },
+      "specs": {
+        "engine": "3.8L Naturally Aspirated Flat-6",
+        "power": "400 hp",
+        "torque": "440 Nm",
+        "transmission": "7-Speed Manual",
+        "zeroToSixty": "4.5 seconds",
+        "topSpeed": "188 mph",
+        "curbWeight": "1415 kg",
+        "fuelEconomy": "27 mpg",
+        "seatingCapacity": "4",
+        "fuelCapacity": "64 liters",
+        "wheelbase": "2450 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Porsche",
+      "model": "911 GT2 RS (992)",
+      "year": "2020",
+      "price": "293200",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Porsche 911 GT2 RS 992"
+      },
+      "specs": {
+        "engine": "3.8L Twin-Turbo Flat-6",
+        "power": "700 hp",
+        "torque": "750 Nm",
+        "transmission": "7-Speed PDK",
+        "zeroToSixty": "2.7 seconds",
+        "topSpeed": "211 mph",
+        "curbWeight": "1470 kg",
+        "fuelEconomy": "21 mpg",
+        "seatingCapacity": "2",
+        "fuelCapacity": "67 liters",
+        "wheelbase": "2453 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Porsche",
+      "model": "911 GT3 (997)",
+      "year": "2007",
+      "price": "106000",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Porsche 911 GT3 997"
+      },
+      "specs": {
+        "engine": "3.6L Naturally Aspirated Flat-6",
+        "power": "415 hp",
+        "torque": "405 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "4.1 seconds",
+        "topSpeed": "192 mph",
+        "curbWeight": "1395 kg",
+        "fuelEconomy": "17 mpg",
+        "seatingCapacity": "2",
+        "fuelCapacity": "90 liters",
+        "wheelbase": "2355 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Porsche",
+      "model": "911 GT3 RS (991)",
+      "year": "2016",
+      "price": "175900",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Porsche 911 GT3 RS 991"
+      },
+      "specs": {
+        "engine": "4.0L Naturally Aspirated Flat-6",
+        "power": "500 hp",
+        "torque": "460 Nm",
+        "transmission": "7-Speed PDK",
+        "zeroToSixty": "3.1 seconds",
+        "topSpeed": "193 mph",
+        "curbWeight": "1420 kg",
+        "fuelEconomy": "19 mpg",
+        "seatingCapacity": "2",
+        "fuelCapacity": "68 liters",
+        "wheelbase": "2450 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Porsche",
+      "model": "911 Turbo (996)",
+      "year": "2000",
+      "price": "99000",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Porsche 911 Turbo 996"
+      },
+      "specs": {
+        "engine": "3.6L Twin-Turbo Flat-6",
+        "power": "420 hp",
+        "torque": "560 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "4.2 seconds",
+        "topSpeed": "189 mph",
+        "curbWeight": "1540 kg",
+        "fuelEconomy": "19 mpg",
+        "seatingCapacity": "4",
+        "fuelCapacity": "64 liters",
+        "wheelbase": "2350 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Subaru",
+      "model": "WRX STI",
+      "year": "2020",
+      "price": "36995",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Subaru WRX STI"
+      },
+      "specs": {
+        "engine": "2.5L Turbocharged H4",
+        "power": "310 hp",
+        "torque": "393 Nm",
+        "transmission": "6-Speed Manual",
+        "zeroToSixty": "4.5 seconds",
+        "topSpeed": "159 mph",
+        "curbWeight": "1530 kg",
+        "fuelEconomy": "17 mpg city / 22 mpg highway",
+        "seatingCapacity": "5",
+        "fuelCapacity": "60 liters",
+        "wheelbase": "2650 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Tesla",
+      "model": "Model S Plaid",
+      "year": "2021",
+      "price": "129990",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Tesla Model S Plaid"
+      },
+      "specs": {
+        "engine": "Tri Electric Motor",
+        "power": "1020 hp",
+        "torque": "1420 Nm",
+        "transmission": "Single-Speed",
+        "zeroToSixty": "1.99 seconds",
+        "topSpeed": "200 mph",
+        "curbWeight": "2185 kg",
+        "fuelEconomy": "120 MPGe",
+        "seatingCapacity": "5",
+        "fuelCapacity": "Electric - 100 kWh battery",
+        "wheelbase": "2960 mm"
+      },
+      "search_history": []
+    },
+    {
+      "make": "Toyota",
+      "model": "Supra",
+      "year": "2020",
+      "price": "50990",
+      "img": {
+        "lowsrc": "...",
+        "src": "...",
+        "alt": "Toyota Supra"
+      },
+      "specs": {
+        "engine": "3.0L Twin-Scroll Turbocharged I6",
+        "power": "382 hp",
+        "torque": "499 Nm",
+        "transmission": "8-Speed Automatic",
+        "zeroToSixty": "3.9 seconds",
+        "topSpeed": "155 mph",
+        "curbWeight": "1496 kg",
+        "fuelEconomy": "24 mpg city / 31 mpg highway",
+        "seatingCapacity": "2",
+        "fuelCapacity": "52 liters",
+        "wheelbase": "2470 mm"
+      },
+      "search_history": []
+    }
+  ]
+}
