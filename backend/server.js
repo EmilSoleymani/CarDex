@@ -15,11 +15,21 @@
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
-const axios = require('axios')
+const axios = require('axios');
+const AWS = require('aws-sdk');
+require('dotenv').config();
+
+AWS.config.update({
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+});
 
 const app = express();
 const port = 3001;
-const S3_URL = 'https://lecture-slides.s3.amazonaws.com/api.json';
+const s3 = new AWS.S3();
+const BUCKET_NAME = 'lecture-slides';
+const FILE_KEY = 'api.json';
+const S3_URL = `https://${BUCKET_NAME}.s3.amazonaws.com/${FILE_KEY}`;
 let apiData;
 let server;
 
@@ -44,6 +54,25 @@ async function fetchApiData() {
     }
 }
 
+/**
+ * Uploads API data to an S3 bucket.
+ */
+async function uploadApiData() {
+    const params = {
+      Bucket: BUCKET_NAME,
+      Key: FILE_KEY,
+      Body: JSON.stringify(apiData, null, 2),
+      ContentType: 'application/json'
+    };
+  
+    try {
+        const data = await s3.putObject(params).promise();
+        console.log('Successfully uploaded data to S3', data);
+    } catch (err) {
+        console.error('Error uploading data to S3:', err);
+    }
+}
+
 // Fetch data before starting server
 fetchApiData().then(() => {
     server = app.listen(port, () => {
@@ -61,7 +90,6 @@ app.post('/api/addSearch', (req, res) => {
     // Handle the search query...
     console.log('Adding search to history...');
     
-    // const data = require('./public/data/api.json');
     const data = apiData;  // Set data variable to global apiData
     
     // Find all entries in data.data where searchQuery matches entry.make + ' ' + entry.model and add the current datetime to the entry.search_history array
@@ -152,10 +180,9 @@ function gracefulShutdown(signal) {
     server.close(async () => {
       console.log('Closed out remaining connections.');
   
-      // Perform your cleanup tasks here
-      // For example, upload updated data to S3
-      // await uploadApiData();
-  
+      // Upload API data to S3 before shutting down
+      await uploadApiData();
+
       console.log('Cleanup completed.');
   
       process.exit(0);
