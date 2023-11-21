@@ -27,6 +27,7 @@ const S3_URL = `https://${BUCKET_NAME}.s3.amazonaws.com/${FILE_KEY}`;
 let apiData;
 let server;
 let credentialsFound = false;
+let updated = false; // Flag to indicate whether the API data has been updated
 
 app.use(cors());
 
@@ -91,9 +92,9 @@ fetchApiData().then(() => {
 app.use(express.json());
 
 // POST route to handle the request of adding a search history
-app.post('/api/addSearch', (req, res) => {
-    const searchQuery = req.body.search;
-    console.log('\nSearch query received:', searchQuery);
+app.post('/api/addSearch/:search', (req, res) => {
+    const searchQuery = req.params.search;
+    console.log('\nSearch param received:', searchQuery);
     // Handle the search query...
     console.log('Adding search to history...');
     
@@ -104,11 +105,13 @@ app.post('/api/addSearch', (req, res) => {
         entry.search_history.push(new Date().toISOString());
     });
 
+    updated = true;
+
     var updatedData = apiData.data.filter(entry => {
       return entry.year + ' ' + entry.make + ' ' + entry.model === searchQuery;
     })
 
-    console.log('Search history updated:', updatedData);
+    console.log('Search history updated:', updatedData[0].search_history);
 
     // Send a response to the client
     if (updatedData.length > 0) {
@@ -116,6 +119,11 @@ app.post('/api/addSearch', (req, res) => {
     } else {
       res.status(201).send('Nothing updated')
     }
+});
+
+// GET at endpoint / returns the entire JSON data
+app.get('/', async (req, res) => {
+    res.json(apiData)
 });
 
 // GET at endpoint /api/trendingModels reads the data at public/data/api.json under entry "data" and sorts by length of search_history field in each entry
@@ -132,6 +140,8 @@ app.get('/api/trendingModels', async (req, res) => {
             return searchDate > thirtyDaysAgo;
         });
     });
+
+    updated = true;
 
     var sortedData = apiData.data.sort((a, b) => {
       // First sort: by make and model alphabetically
@@ -219,6 +229,44 @@ app.get('/api/manufacturers/:manufacturer', async (req, res) => {
   }
 });
 
+// GET at endpoint /api/gasPrice
+app.get('/api/gasPrice', async (req, res) => {
+    if (!process.env.COLLECT_API_TOKEN) {
+        console.log('No API token found for gas price API!');
+        res.status(500).send('No API token found for gas price API!');
+    }
+
+    const long = req.body.long;
+    const lat = req.body.lat;
+    let url;
+
+    if(long && lat) {
+        url = `https://api.collectapi.com/gasPrice/fromCoordinates?lng=${long}&lat=${lat}`
+    } else {
+        url = 'https://api.collectapi.com/gasPrice/canada'
+    }
+
+    const config = {
+        method: 'get',
+        url: url,
+        headers: { 
+            'authorization': process.env.COLLECT_API_TOKEN, 
+            'content-type': 'application/json'
+        }
+    };
+
+    axios(config)
+    .then(function (response) {
+        console.log(JSON.stringify(response.data));
+
+        res.json(response.data.result)
+    })
+    .catch(function (error) {
+        console.error(error);
+        res.status(500).send('Error fetching gas price');
+    });
+});
+
 /**
  * Gracefully shuts down the server when a termination signal is received
  * 
@@ -231,7 +279,7 @@ function gracefulShutdown(signal) {
       console.log('Closed out remaining connections.');
   
       // Upload API data to S3 before shutting down
-      if (credentialsFound) await uploadApiData();
+      if (credentialsFound && updated) await uploadApiData();
 
       console.log('Cleanup completed.');
   

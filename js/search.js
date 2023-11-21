@@ -31,7 +31,7 @@ $(document).ready(function() {
             searchResults.css('display', 'block');
 
             $.ajax({
-                url: 'http://localhost:3001/data/api.json',
+                url: 'http://localhost:3001/',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
@@ -69,7 +69,7 @@ $(document).ready(function() {
             return;
         } else {
             $.ajax({
-                url: 'http://localhost:3001/data/api.json',
+                url: 'http://localhost:3001/',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {

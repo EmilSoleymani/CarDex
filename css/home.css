@@ -146,3 +146,42 @@ Date: 2023-10-12
     transition: all 0.3s ease-in-out;
 }
 /**** TRENDING MODELS ****/
+
+#estimated-gas-wrapper {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+#estimated-gas-wrapper:hover {
+    opacity: 1;
+}
+
+#estimated-gas-wrapper h1 {
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: larger;
+}
+
+.estimated-gas-content-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+    align-items: center;
+}
+
+.estimated-gas-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.estimated-gas-amt {
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: large;
+}

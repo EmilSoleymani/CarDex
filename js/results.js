@@ -15,7 +15,7 @@ $(document).ready(function() {
 
         // Get the data from the api
         $.ajax({
-            url: 'http://localhost:3001/data/api.json',
+            url: 'http://localhost:3001/',
             method: 'GET',
             dataType: 'json',
             success: function(data) {
@@ -122,6 +122,18 @@ $(document).ready(function() {
             console.log('Adding search history for ' + search);
             // Set cookie
             setCookie(search);
+            // Make POST request to /api/addSearch with search=search
+            $.ajax({
+                url: 'http://localhost:3001/api/addSearch/' + search,
+                method: 'POST',
+                dataType: 'json',
+                success: function(data) {
+                    console.log('Successfully added search history for ' + search);
+                },
+                error: function(error) {
+                    console.error('Error adding search history for ' + search, error);
+                }
+            });
         }
 
         displayResultData(search);
