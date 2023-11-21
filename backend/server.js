@@ -32,7 +32,7 @@ let updated = false; // Flag to indicate whether the API data has been updated
 app.use(cors());
 
 // Serve static files from the "public" directory
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 /**
  * Fetches the API data from S3
