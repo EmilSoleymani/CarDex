@@ -13,7 +13,6 @@
  * Last Modification: 2023-11-20
  */
 const express = require('express');
-const fs = require('fs');
 const cors = require('cors');
 const axios = require('axios');
 const AWS = require('aws-sdk');
@@ -172,6 +171,51 @@ app.get('/api/manufacturers', async (req, res) => {
     // Handle possible errors
     console.error('Error reading the JSON file:', error);
     res.status(500).send('An error occurred while retrieving the manufacturers');
+  }
+});
+
+// GET at endpoint /api/manufacturers/:manufacturer makes a request to https://vpic.nhtsa.dot.gov/api/vehicles/GetManufacturerDetails/:manufacturer?format=json and returns data about a specific manufacturer
+app.get('/api/manufacturers/:manufacturer', async (req, res) => {
+  try {
+    // Get a list of all models for the specified manufacturer
+    const manufacturer = req.params.manufacturer;
+    // Make request to https://vpic.nhtsa.dot.gov/api/vehicles/GetManufacturerDetails/:manufacturer?format=json
+    const response = await axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/GetManufacturerDetails/${manufacturer}?format=json`);
+    var result;
+    
+    // If response.data.Count is 0, return 404
+    if (response.data.Count === 0) {
+      result = {
+        Address: 'n/a',
+        Country: 'n/a'
+      }
+      res.json(result);
+      return
+    }
+
+    // Get the result that Mfr_CommonName contains the manufacturer name
+    result = response.data.Results.find(res => {
+        if (!res.Mfr_CommonName) return false
+        else return res.Mfr_CommonName.toLowerCase() === manufacturer.toLowerCase()
+    });
+
+    if (!result) {
+        result = response.data.Results[0]
+    }
+
+    if (!result.Address) {
+        result.Address = 'n/a'
+    }
+    if(!result.Country) {
+        result.Country = 'n/a'
+    }
+
+    // Return response.data.Results
+    res.json(result);  // Return the first result
+  } catch (error) {
+    // Handle possible errors
+    console.error('Error reading the JSON file:', error);
+    res.status(500).send('An error occurred while retrieving manufacturer details');
   }
 });
 
