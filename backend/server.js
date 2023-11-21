@@ -229,18 +229,18 @@ app.get('/api/manufacturers/:manufacturer', async (req, res) => {
   }
 });
 
-// GET at endpoint /api/gasPrice
+// GET at endpoint /api/gasPrice?long=long&lat=lat makes a request to https://api.collectapi.com/gasPrice/fromCoordinates?lng=long&lat=lat and returns the gas price at the specified coordinates
 app.get('/api/gasPrice', async (req, res) => {
     if (!process.env.COLLECT_API_TOKEN) {
         console.log('No API token found for gas price API!');
         res.status(500).send('No API token found for gas price API!');
     }
 
-    const long = req.body.long;
-    const lat = req.body.lat;
+    const long = req.query.long;
+    const lat = req.query.lat;
     let url;
 
-    if(long && lat) {
+    if(long !== null && lat !== null) {
         url = `https://api.collectapi.com/gasPrice/fromCoordinates?lng=${long}&lat=${lat}`
     } else {
         url = 'https://api.collectapi.com/gasPrice/canada'
