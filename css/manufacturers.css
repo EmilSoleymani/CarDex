@@ -48,7 +48,7 @@
     opacity: 1;
 }
 
-.manufacturer-wrapper p {
+.manufacturer-name {
     transition: all 0.3s ease-in-out;
     color: var(--text-color);
     font-weight: 300;
@@ -57,6 +57,14 @@
 
 .manufacturer-wrapper:hover  p {
     transform: scale(1);
+}
+
+.manufacturer-desc {
+    font-size: 12px;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-color);
+    font-weight: 300;
+    transform: scale(0);
 }
 
 #footer-space {

@@ -38,12 +38,27 @@ $(document).ready(function() {
 
         // Create p with class="manufacturer-name" and set innerHTML to name
         var nameP = $('<p>').addClass('manufacturer-name').html(name);
+        var descriptionP = $('<p>').addClass('manufacturer-desc');
+
+        // Make a request to /api/manufacturers/:manufacturer
+        $.ajax({
+            url: 'http://localhost:3001/api/manufacturers/' + name,
+            method: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                descriptionP.html(data.Address + ' | ' + data.Country)
+            },
+            error: function(error) {
+                console.error('Error getting manufacturer details for ' + name, error);
+            }
+        });
 
         // Add img to div
         modelDiv.append(img);
 
         // Add p to div
         modelDiv.append(nameP);
+        modelDiv.append(descriptionP);
 
         // Add div to manufacturersList
         manufacturersList.append(modelDiv);
