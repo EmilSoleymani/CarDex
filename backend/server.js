@@ -19,11 +19,6 @@ const axios = require('axios');
 const AWS = require('aws-sdk');
 require('dotenv').config();
 
-AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-});
-
 const app = express();
 const port = 3001;
 const s3 = new AWS.S3();
@@ -32,6 +27,7 @@ const FILE_KEY = 'api.json';
 const S3_URL = `https://${BUCKET_NAME}.s3.amazonaws.com/${FILE_KEY}`;
 let apiData;
 let server;
+let credentialsFound = false;
 
 app.use(cors());
 
@@ -64,7 +60,7 @@ async function uploadApiData() {
       Body: JSON.stringify(apiData, null, 2),
       ContentType: 'application/json'
     };
-  
+
     try {
         const data = await s3.putObject(params).promise();
         console.log('Successfully uploaded data to S3', data);
@@ -76,7 +72,19 @@ async function uploadApiData() {
 // Fetch data before starting server
 fetchApiData().then(() => {
     server = app.listen(port, () => {
-      console.log(`Server running at http://localhost:${port}/`);
+        
+        if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) {
+            console.log('AWS credentials not found. Please set AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in a .env file.');
+            console.log('Changes will not be pushed to S3');
+        } else {
+            credentialsFound = true;
+            AWS.config.update({
+                accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+                secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+            });
+        }
+
+        console.log(`Server running at http://localhost:${port}/`);
     });
 });
 
@@ -89,8 +97,6 @@ app.post('/api/addSearch', (req, res) => {
     console.log('\nSearch query received:', searchQuery);
     // Handle the search query...
     console.log('Adding search to history...');
-    
-    const data = apiData;  // Set data variable to global apiData
     
     // Find all entries in data.data where searchQuery matches entry.make + ' ' + entry.model and add the current datetime to the entry.search_history array
     apiData.data.filter(entry => {
@@ -181,7 +187,7 @@ function gracefulShutdown(signal) {
       console.log('Closed out remaining connections.');
   
       // Upload API data to S3 before shutting down
-      await uploadApiData();
+      if (credentialsFound) await uploadApiData();
 
       console.log('Cleanup completed.');
   
